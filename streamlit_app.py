@@ -1,7 +1,7 @@
 import streamlit
 
 streamlit.title('breakpast menu')
-streamlit.header('idly')
+streamlit.text('idly')
 streamlit.text('dosa')
 streamlit.text('uppittu')
-streamlit.title('chapathi')
+streamlit.text('chapathi')
