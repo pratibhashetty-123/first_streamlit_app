@@ -1,7 +1,7 @@
 import streamlit
 
 streamlit.title('healthy dinner')
-streamlit.heades('breakpast menu')
+streamlit.header('breakpast menu')
 streamlit.text('idly')
 streamlit.text('dosa')
 streamlit.text('uppittu')
