@@ -64,7 +64,8 @@ my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load contains:")
 streamlit.dataframe(my_data_rows)
-fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_data_rows.index),['banana','jackfruit'])
-fruits_to_show = streamlit.dataframe(my_data_rows)
-
+#add a second text box
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+fruit_choice = streamlit.text_input('What fruit would you like to add?','Jackfruit')
+streamlit.write('Thanks for adding Jackfruit ', fruit_choice)
 
