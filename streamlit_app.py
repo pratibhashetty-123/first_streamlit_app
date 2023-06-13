@@ -57,9 +57,7 @@ streamlit.write('The user entered ', fruit_choice)
 # output it to the screen as table
 streamlit.dataframe(fruityvice_normalized)
 
- 
-
-import snowflake.connector
+ import snowflake.connector
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
@@ -67,4 +65,6 @@ my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
 my_data_row = my_cur.fetchone()
 streamlit.text("the fruit load contain:")
 streamlit.text(my_data_row)
+
+
 
